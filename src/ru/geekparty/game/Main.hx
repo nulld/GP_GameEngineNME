@@ -1,5 +1,6 @@
 package ru.geekparty.game;
 
+import nme.display.FPS;
 import nme.display.Sprite;
 import nme.events.Event;
 import nme.Lib;
@@ -11,6 +12,8 @@ import nme.Lib;
 
 class Main extends Sprite 
 {
+	
+	var game:Game;
 	
 	public function new() 
 	{
@@ -25,6 +28,12 @@ class Main extends Sprite
 	private function init(e) 
 	{
 		// entry point
+		
+		var game:Game = new Game();
+		game.Start();
+		addChild(game);
+		
+		addChild( new FPS(10,10,0xffffff));
 	}
 	
 	static public function main() 
