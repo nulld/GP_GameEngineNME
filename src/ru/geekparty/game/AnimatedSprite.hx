@@ -12,7 +12,7 @@ typedef AtlasAnimationPair = {
 	var animation:Animation;
 }
 
-class AnimatedSprite extends Sprite, implements IUpdatable, implements IDrawable
+class AnimatedSprite extends Sprite, implements IUpdatable
 {
 	
 	public var atlases:Array<AtlasAnimationPair>;
